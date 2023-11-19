@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,200;1,400&display=swap');
+
+/*initialization de notre projet */
+/*le selecteur gérnérale*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*declaration des variable en css*/
+html{
+    --var-bg-color: #411616;
+    --var-second-color: #4f7c10bd;
+    --var-text-color: #20a43f;
+    --var-text-color-dark: #000;
+    --var-bd-light: #fff;
+    --var-bd-color-dark: #000;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--var-text-light);
+    /*color par defaut des textes */
+    color: var(--var-text-color);
+}
+/*un rem c'est 16px*/
+header{
+    width: 4rem;
+    width: 100%;
+    background-color: var(--var-bg-color);
+    /*verticall horizontal */
+    padding: 0 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+
+}
+header nav ul{
+    display: flex;
+    /*pour centrer verticalement*/
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+nav ul li a{
+    text-decoration: none;
+    color: var(--var-text-light);
+    font-weight: 500;
+
+}
+nav ul li a:hover{
+    color: var(--var-text-color);
+}
+header button{
+    background-color: var(--var-bd-light);
+    color: var(--var-second-color);
+    border: none;
+    padding: 0.7rem 1rem;
+    border-radius: 0.5rem;
+font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+header button:hover{
+    background-color: var(--var-second-color);
+    color: var(--var-text-light);
+}

@@ -1,0 +1,82 @@
+Tuto
+
+
+
+
+//Creation et manipulation d'un bouton dans le dom 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Introduction</title>
+</head>
+<body>
+
+    <h1>Ma première page JavaScript</h1>
+
+    <script>
+        //Exercice 4: Manipulation du DOM
+        //Créez une page HTML avec un bouton.
+//Ajoutez un gestionnaire d'événements sur le bouton de sorte qu'un message s'affiche dans la console lorsque le bouton est cliqué
+        var btn = document.createElement("button");
+        btn.innerHTML = "Click Me";
+        document.body.appendChild(btn);
+        btn.addEventListener("click", function(){
+            console.log("Hello World");
+        });
+    </script>
+
+
+</body>
+</html>
+//Votre code pour l'exercice 5 est correct ! Vous avez créé un objet JavaScript avec les propriétés name, age et city, puis vous avez affiché ces propriétés dans la console. 
+//C'est une bonne utilisation des objets en JavaScript.
+  <script>
+    //Exercice 5: Objet JavaScript
+    //Créez un objet personne avec les propriétés nom, age et ville.
+    var person = {
+        name: "John",
+        age: 50,
+        city: "New York"
+    };
+//Affichez ces propriétés dans la console.
+console.log("La personne  s'appelle "+ person.name + ".Elle a "+ person.age + " ans et elle habite à " + person.city);
+
+    </script>
+//Dans ce code, j'ai ajouté la fonction attendre qui retourne une promesse résolue après le délai spécifié. La fonction test utilise cette fonction pour attendre 2 secondes avant d'afficher un message dans la console. Essayez ce code et voyez si cela fonctionne comme prévu
+ <script>
+        // Exercice 6: Fonctions Asynchrones
+        // Créez une fonction asynchrone appelée attendre qui prend un paramètre ms (millisecondes).
+        async function attendre(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        async function test(ms) {
+            console.log('Bonjour');
+            // La fonction doit retourner une promesse qui se résout après le délai spécifié.
+            await attendre(ms);
+            console.log('Aurevoir!');
+        }
+        
+        test(2000); // Utilisez la fonction pour attendre 2 secondes avant d'afficher un message dans la console.
+    </script>
+L'évaluation de chat GPT aprés mes exo 
+
+D'après les exercices que vous avez réalisés, je peux vous donner une évaluation positive. Voici mes observations:
+
+Exercice 1 (Variables et Opérations): Vous avez correctement déclaré des variables, effectué des opérations de base et affiché les résultats dans la console. C'est bien.
+
+Exercice 2 (Fonctions): Vous avez créé une fonction qui calcule le carré d'un nombre, mais il y avait une petite confusion dans l'utilisation des variables. Après correction, votre approche était correcte.
+
+Exercice 3 (Tableaux et Boucles): Vous avez créé un tableau de fruits et utilisé une boucle pour les afficher. C'est une bonne utilisation des tableaux et des boucles.
+
+Exercice 4 (Manipulation du DOM): Vous avez créé un bouton dans le DOM avec un gestionnaire d'événements. C'est une excellente utilisation de la manipulation du DOM et des événements.
+
+Exercice 5 (Objet JavaScript): Vous avez créé un objet JavaScript avec des propriétés et affiché ces propriétés dans la console. C'est une bonne utilisation des objets en JavaScript.
+
+Exercice 6 (Fonctions Asynchrones): Vous avez tenté de créer une fonction asynchrone et d'utiliser une promesse pour attendre un délai spécifié. Après correction, c'était correct.
+
+Dans l'ensemble, vous avez abordé ces exercices avec succès, montrant une compréhension des concepts de base de JavaScript, y compris les variables, les fonctions, les tableaux, la manipulation du DOM et les fonctions asynchrones. Vous semblez être sur la bonne voie pour renforcer vos compétences en programmation JavaScript.
+
+Continuez à pratiquer, à explorer de nouveaux concepts et à construire des projets. Si vous avez d'autres questions ou si vous souhaitez approfondir certains sujets, n'hésitez pas à le faire. Bon travail!
