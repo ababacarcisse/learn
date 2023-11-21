@@ -68,3 +68,261 @@ header button:hover{
     background-color: var(--var-second-color);
     color: var(--var-text-light);
 }
+main{
+    padding: 2rem;
+}
+#hero{
+    width: 100%;
+    height:  70%;
+    padding: 3rem;
+    background: linear-gradient(
+        90deg,
+        var(--var-bg-color) 15%,
+        var(--var-second-color) 100%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#hero .gauche h1{
+    font-size: 2rem;
+    font-weight: 900;
+    color: #fff;
+    margin: 1rem 0;
+}
+#hero .gauche p{
+font-size: 1rem;
+font-weight: 900;
+color: aqua;
+margin: 1rem 0;
+}
+#hero .gauche button{
+    color: white;
+    background-color: var(--var-second-color);
+    border: none;
+    padding: 0.7rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+}
+.droite img{
+    width: 300px;
+    height: 100%;
+    object-fit: cover;
+}
+#services{
+    margin-top: 2rem;
+}
+#services h2{
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--var-text-color-dark);
+    margin-bottom :1rem ;
+    text-align: center;
+}
+#list-services{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;margin-top: 3rem;
+}
+#list-services .card-service{
+    width: 30%;
+    background-color: var(--var-bg-color);
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+} 
+#list-services .card-service .icon{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(19, 19, 131);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#list-services .card-service .icon i{
+   font-size: 2rem;
+   color: aliceblue;
+}
+#list-services .card-service h3{
+    font-size: 1.5rem;
+    font-weight: 900;
+    padding: 1rem 0;
+    color: var(--var-text-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}   
+#list-services .card-service p{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--var-text-color);
+    text-align: center;
+}
+#album{
+    margin-top: 2rem;
+    padding: 1rem;
+}
+#album h2{
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--var-text-color-dark);
+    margin-bottom :1rem ;
+    text-align: center;
+}
+#album .img-phto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    
+}
+#album .img-phto .img{
+    background-color: var(--var-bg-color);
+    width: 30%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+#contact{
+    margin-top: 2rem;
+    padding: 1rem;
+}
+#contact h1{
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--var-text-color-dark);
+    margin-bottom :1rem ;
+    text-align: center;
+}
+#contact p{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--var-text-color);
+    text-align: center;
+
+}
+#contact .partiel{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+#contact .partiel h1{
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--var-text-color-dark);
+    margin-bottom :1rem ;
+    text-align: center;
+}
+#contact .partiel form{
+    width: 50%;
+    background-color: var(--var-bg-color);
+    padding: 1rem;
+    border-radius: 5px;
+    display: table-column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+#contact .partiel form input{
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+#contact .partiel form textarea{
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+#contact .partiel form button{
+    width: 50%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: var(--var-second-color);
+    color: var(--var-text-light);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+#contact .partiel form button:hover{
+    background-color: var(--var-text-light);
+    color: var(--var-bd-color-dark);
+}
+footer{
+    position: relative;
+    width: 100%;
+    background-color: var(--var-bg-color);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    margin-top: 2rem;
+
+}
+#social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+#icon {
+    display: flex;
+}
+
+#carte {
+    background-color: #ffffff; /* Background color for the icon container */
+    border-radius: 50%; /* Make the container circular */
+    margin: 0 8px; /* Adjust spacing between icons */
+    padding: 12px; /* Add padding to give space around the icons */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+#carte:hover {
+    background-color: #eaeaea; /* Change background color on hover */
+}
+
+.fa-brands {
+    font-size: 24px; /* Adjust the icon size */
+    color: #333; /* Set the default icon color */
+}
+
+/* Add more specific styles for each social media icon if needed */
+#carte i.fa-brands.fa-facebook {
+    color: #3b5998; /* Facebook color */
+}
+
+#carte i.fa-brands.fa-twitter {
+    color: #1da1f2; /* Twitter color */
+}
+
+#carte i.fa-brands.fa-instagram {
+    color: #e1306c; /* Instagram color */
+}
+
+#carte i.fa-brands.fa-linkedin {
+    color: #0077b5; /* LinkedIn color */
+}
