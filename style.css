@@ -67,6 +67,7 @@ font-weight: 500;
 header button:hover{
     background-color: var(--var-second-color);
     color: var(--var-text-light);
+    
 }
 main{
     padding: 2rem;
@@ -170,7 +171,6 @@ margin: 1rem 0;
 }
 #album{
     margin-top: 2rem;
-    padding: 1rem;
 }
 #album h2{
     font-size: 2rem;
@@ -179,95 +179,86 @@ margin: 1rem 0;
     margin-bottom :1rem ;
     text-align: center;
 }
-#album .img-phto{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+#album .photo{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
     
 }
-#album .img-phto .img{
-    background-color: var(--var-bg-color);
-    width: 30%;
-    height: 200px;
+.photo img{
+    width: 100%;
     object-fit: cover;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    
 }
+
 #contact{
-    margin-top: 2rem;
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    height: calc(100vh - 200px);
+    background-color: #fff;
+    position: relative;
+
+}
+#contact .partiel1 ,
+partiel2{
+    flex: 1;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    position: relative;
     padding: 1rem;
 }
-#contact h1{
+#contact .partiel1{
+ background-color: #ccb6fa;
+ display: flex;
+ flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#contact  h1{
     font-size: 2rem;
     font-weight: 900;
     color: var(--var-text-color-dark);
     margin-bottom :1rem ;
     text-align: center;
 }
-#contact p{
-    font-size: 1rem;
-    font-weight: 500;
-    color: var(--var-text-color);
-    text-align: center;
 
+#contact .partiel2 form{
+  width: 90%;
+margin: auto;
+display: flex;
+flex-direction: column;
 }
-#contact .partiel{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 2rem;
+ .partiel2 form input,
+ textarea{
+   width: 100%;
+   padding: 0.8 1rem;
+   border: 1px solid #ccc;
+   margin-bottom: 1rem;
+   outline: none ;
+   border-radius: 5px;
+   font-size: 1rem;
 }
-#contact .partiel h1{
-    font-size: 1.5rem;
-    font-weight: 900;
-    color: var(--var-text-color-dark);
-    margin-bottom :1rem ;
-    text-align: center;
+#contact .partiel2 form textarea{
+    height: 100px
 }
-#contact .partiel form{
-    width: 50%;
+
+#contact .partiel2 form button{
     background-color: var(--var-bg-color);
-    padding: 1rem;
-    border-radius: 5px;
-    display: table-column;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-#contact .partiel form input{
-    width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
+    color: #fff;
     border: none;
-    border-radius: 5px;
-    outline: none;
-}
-#contact .partiel form textarea{
-    width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border: none;
-    border-radius: 5px;
-    outline: none;
-}
-#contact .partiel form button{
-    width: 50%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border: none;
-    border-radius: 5px;
-    outline: none;
-    background-color: var(--var-second-color);
-    color: var(--var-text-light);
+    padding: 0.7rem 1rem;
+    border-radius: 0.5rem;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+  
 }
-#contact .partiel form button:hover{
-    background-color: var(--var-text-light);
-    color: var(--var-bd-color-dark);
+#contact .partiel2 form button:hover{
+    background-color: var(--var-second-color);
+    color: var(--var-text-light);
 }
 footer{
     position: relative;
@@ -283,15 +274,17 @@ footer{
 
 }
 #social-media {
+  right: 0;
+    position: fixed;
+    bottom: 3rem;
+    padding: 10px;
+    border-radius: 2px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
+    flex-direction: column;
+    gap: 5px;
 }
 
-#icon {
-    display: flex;
-}
+
 
 #carte {
     background-color: #ffffff; /* Background color for the icon container */
@@ -299,30 +292,89 @@ footer{
     margin: 0 8px; /* Adjust spacing between icons */
     padding: 12px; /* Add padding to give space around the icons */
     transition: background-color 0.3s ease; /* Smooth transition on hover */
+
 }
 
 #carte:hover {
     background-color: #eaeaea; /* Change background color on hover */
 }
+@media screen and (max-width: 768px) {
+  
+    header nav{
+       display: none;
+   } 
+    header button{
+         display: block;
+    }
+    
+    #hero{
+        flex-direction: column;
+        min-height: 100vh;  
+        gap: 2rem;;   
+    }
+    #hero .gauche h1{
+      font-size: 40px;
+    }
+    #hero .gauche p{
+        font-size: 20px;
+    }
+    #hero .gauche button{
+        font-size: 20px;
+    }
+    #hero .droite img{
+        width: 100%;
+        height: 100%;
+    }
+    #list-services .card-service{
+        width: 100%;
+    }
+    #list-services .card-service .icon{
+        top: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #list-services .card-service h3{
+        font-size: 1.5rem;
+    }
+    #list-services .card-service p{
+        font-size: 1rem;
+    }
+    #album .photo{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #album .photo img{
+        width: 100%;
+        height: 100%;
+    }
+    #contact{
+        flex-direction: column;
+        height: auto;
+    }
+    #contact .partiel1{
+        height: 50vh;
+    }
+    #contact .partiel2{
+        height: 50vh;
+    }
+    #contact .partiel2 form{
+        width: 100%;
+    }
+    #contact .partiel2 form input{
+        width: 100%;
+        height: 50px;
+        border-radius: 0.8rem;
+    }
+    #contact .partiel2 form textarea{
+        width: 100%;
+        height: 100px;
+        border-radius: 0.8rem;
+    }
+    #contact .partiel2 form button{
+        width: 100%;
+    }
+    footer{
+        height: auto;
+    }
+    
 
-.fa-brands {
-    font-size: 24px; /* Adjust the icon size */
-    color: #333; /* Set the default icon color */
-}
-
-/* Add more specific styles for each social media icon if needed */
-#carte i.fa-brands.fa-facebook {
-    color: #3b5998; /* Facebook color */
-}
-
-#carte i.fa-brands.fa-twitter {
-    color: #1da1f2; /* Twitter color */
-}
-
-#carte i.fa-brands.fa-instagram {
-    color: #e1306c; /* Instagram color */
-}
-
-#carte i.fa-brands.fa-linkedin {
-    color: #0077b5; /* LinkedIn color */
 }
